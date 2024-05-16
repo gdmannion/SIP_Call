@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make SIP Call</title>
+</head>
+<body>
+    <h1>Make SIP Call</h1>
+    <form id="callForm" action="/make_call" method="post">
+        <label for="ip_address">IP Address:</label><br>
+        <input type="text" id="ip_address" name="ip_address"><br>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br>
+        <label for="destination">Destination Number:</label><br>
+        <input type="text" id="destination" name="destination"><br><br>
+        <button type="submit">Make Call</button>
+    </form>
+</body>
+</html>

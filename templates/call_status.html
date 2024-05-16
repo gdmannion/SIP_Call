@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Status</title>
+</head>
+<body>
+    <h1>Call Status</h1>
+    <div>
+        <p><strong>Call ID:</strong> {{ call_status.CallId }}</p>
+        <p><strong>Status:</strong> {{ call_status.Status }}</p>
+        <!-- Add more details about the call status here if needed -->
+    </div>
+    <form action="/terminate_call" method="post">
+        <input type="hidden" name="ip_address" value="{{ call_status.ip_address }}">
+        <input type="hidden" name="username" value="{{ call_status.cam_user }}">
+        <input type="hidden" name="password" value="{{ call_status.cam_pass }}">
+        <input type="hidden" name="call_id" value="{{ call_status.CallId }}">
+        <button type="submit">Terminate Call</button>
+    </form>
+</body>
+</html>
